@@ -6,7 +6,7 @@ pipeline {
         stage('validate Maven Project') {
             steps {
                 script {
-                   bat 'mvn validate'
+                   bat 'mvnw validate'
                 }
             }
         }
