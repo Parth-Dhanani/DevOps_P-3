@@ -10,28 +10,28 @@ MAVEN_OPTS = "-Xms512m -Xmx1024m"
         stage('validate Maven Project') {
             steps {
                 script {
-                   bat 'mvn validate'
+                   bat './mvnw validate'
                 }
             }
         }
         stage('compile Mevan Project') {
             steps {
                 script {
-                    bat 'mvn compile'
+                    bat './mvnw compile'
                 }
             }
         }
         stage('Test Meven Project') {
             steps {
                 script {
-                    bat 'mvn test'
+                    bat './mvnw test'
                 }
             }
         }
         stage('Package Maven Project') {
             steps {
                 script {
-                    bat 'mvn package'
+                   bat './mvnw package'
                 }
             }
         }
