@@ -4,7 +4,9 @@ pipeline {
     agent any
 
 environment {
-MAVEN_OPTS = "-Xms512m -Xmx1024m"
+JAVA_HOME = 'C:\Program Files\Eclipse Adoptium\jdk-21.0.3.9-hotspot\bin'
+M2_HOME = 'C:\apache-maven-3.9.8\bin'
+PATH = "${env.PATH}:${JAVA_HOME}/bin:${M2_HOME}/bin"
 }
     stages {
         stage('validate Maven Project') {
